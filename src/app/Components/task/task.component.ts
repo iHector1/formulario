@@ -12,7 +12,7 @@ export class TaskComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  deleteTask(task: Task) {
+  deleteTask(task: Task) {//confirmacion de que quiere el mimanr el item
     if (confirm("estas seguro de querer eliminarlo?")) { 
         this.taskService.deleteTask(task);
     }

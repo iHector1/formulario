@@ -12,14 +12,14 @@ export class TaskService {
       }*/
     ];
   }
-  getTasks() { 
+  getTasks() { //recibimos las rareas si esta bacio lo enivamos, si ya tineen tareas lo agregamos al localStorage
     if (localStorage.getItem("tareas") == null) { return this.task; }
     else { 
       this.task = JSON.parse(localStorage.getItem("tareas"));
       return this.task;
     }
   }
-  addTask(tasks: Task) {
+  addTask(tasks: Task) {//agregamso las tareas las tareas al localstorage
     this.task.push(tasks);
     let task :Task[]= []; 
     if (localStorage.getItem("tareas") == null) {
@@ -34,7 +34,7 @@ export class TaskService {
 
     return false;
   }
-  deleteTask(tasks: Task) {
+  deleteTask(tasks: Task) {//eliminamos la tarea
     for (let i = 0; i < this.task.length; i++) {
       if (tasks == this.task[i]) { 
         this.task.splice(i, 1);

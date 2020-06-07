@@ -12,15 +12,15 @@ export class TaskFormComponent implements OnInit {
   ngOnInit(): void {
   }
   addTask(newTitulo: HTMLInputElement
-    , newArea: HTMLInputElement) { 
+    , newArea: HTMLInputElement) { // los dos campos de html y los agremagos al arreglo de tareas
     this.taskService.addTask({
       title: newTitulo.value,
       description: newArea.value,
       hide: true
     })
-    newTitulo.value = "";
+    newTitulo.value = "";//vaciasmos el regirtro
     newArea.value = "";
-    newTitulo.focus;
+    newTitulo.focus;//enfocamos el cursor en el campo de titulo
 
     return false;
   }

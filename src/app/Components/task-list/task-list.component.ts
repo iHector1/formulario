@@ -10,7 +10,7 @@ export class TaskListComponent implements OnInit {
   tasks: Task[];
   constructor(public taskService:TaskService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {//recbimos las tareas para mostrarlas en la lista de tareas
     this.tasks = this.taskService.getTasks();
     console.log(this.tasks);
   }
