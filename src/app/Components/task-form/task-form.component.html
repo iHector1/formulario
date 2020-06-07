@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-body">
+        <form (submit)="addTask(newTitulo,newArea)">
+            <div class="form-group">
+                <input type="text"  class="form-control" placeholder="titulo de la tarea"#newTitulo required>
+            </div>
+            <div class="form-group">
+                <textarea id="" cols="20" rows="10" placeholder="Descripcion de la tarea" class="form-control"#newArea required></textarea>
+            </div>
+            <button class="btn btn-primary btn-block ">
+                Enviar
+            </button>
+        </form>
+    </div>
+</div>
